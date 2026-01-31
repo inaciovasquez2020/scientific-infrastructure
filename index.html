@@ -1,61 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Scientific Infrastructure (URF)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+  <meta charset="UTF-8">
+  <title>Scientific Infrastructure (URF) — Inacio F. Vasquez</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="description" content="Canonical public operating system for foundational theory. Unified Rigidity Framework (URF).">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --slate-bg: #1e2329;
+      --accent-green: #3f9c35;
+      --text-main: #2f343b;
+      --text-muted: #69707a;
+      --border-light: #eef0f2;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+    body { 
+      margin: 0; 
+      font-family: 'Inter', sans-serif; 
+      color: var(--text-main); 
+      background-color: #f8f9fa; 
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* --- Navigation --- */
+    nav {
+      background: var(--slate-bg);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .nav-brand { color: var(--white); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+    .nav-brand i { color: var(--accent-green); }
+    .nav-links { display: flex; gap: 25px; }
+    .nav-links a { color: #cfd3d8; text-decoration: none; font-size: 13px; font-weight: 500; transition: 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+
+    /* --- Hero --- */
+    .hero {
+      background: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .hero h1 { 
+      font-family: 'Libre Baskerville', serif; 
+      font-size: 2.8rem; 
+      margin: 0; 
+      color: var(--slate-bg);
+      letter-spacing: -1px;
+    }
+    .hero p { max-width: 700px; margin: 20px auto; font-size: 1.1rem; color: var(--text-muted); }
+    
+    .doi-badge { display: inline-block; margin-top: 15px; transition: opacity 0.2s; }
+    .doi-badge:hover { opacity: 0.8; }
+
+    /* --- Container --- */
+    .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+    section { margin-bottom: 80px; }
+    h2.section-label { 
+      font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; 
+      color: var(--accent-green); border-bottom: 2px solid var(--border-light);
+      padding-bottom: 10px; margin-bottom: 30px;
+    }
+
+    /* --- Significance Card (Overview) --- */
+    .sig-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    /* --- Module Lists --- */
+    .module-group { margin-bottom: 40px; }
+    .module-group h3 { font-family: 'Libre Baskerville', serif; font-size: 1.4rem; color: var(--slate-bg); margin-bottom: 20px; }
+    
+    .project-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      padding: 18px 25px;
+      border-radius: 6px;
+      transition: 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .project-card:hover { transform: translateX(5px); border-color: var(--accent-green); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+    .project-card span { font-weight: 600; font-size: 1rem; }
+    .project-card i { color: var(--accent-green); font-size: 0.9rem; }
+
+    /* --- Footer --- */
+    footer {
+      background: var(--slate-bg);
+      color: #9aa0a6;
+      padding: 60px 20px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
 </head>
 <body>
 
-<h1>Scientific Infrastructure (URF)</h1>
-<a href="https://doi.org/10.5281/zenodo.18442204"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18442204.svg" alt="DOI"></a>
+  <nav>
+    <a href="#" class="nav-brand">
+      <i class="fa-solid fa-vial-circle-check"></i>
+      <span>SCIENTIFIC INFRASTRUCTURE</span>
+    </a>
+    <div class="nav-links">
+      <a href="#tier-a">Tier A Modules</a>
+      <a href="#citation">Citation</a>
+      <a href="https://github.com/inaciovasquez2020">GitHub</a>
+    </div>
+  </nav>
 
-<p>
-Canonical public operating system for foundational theory.
-</p>
+  <header class="hero">
+    <h1>Scientific Infrastructure (URF)</h1>
+    <p>The canonical public operating system for foundational theory and deterministic rigidity verification.</p>
+    <a href="https://doi.org/10.5281/zenodo.18442204" class="doi-badge">
+      <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18442204.svg" alt="DOI: 10.5281/zenodo.18442204">
+    </a>
+  </header>
 
-<h2>Tier A — Canonical Modules</h2>
+  <div class="container">
+    
+    <section id="tier-a">
+      <h2 class="section-label">Tier A — Canonical Modules</h2>
 
-<h3>Core</h3>
-<ul>
-  <li><a href="https://github.com/inaciovasquez2020/urf-core">urf-core</a></li>
-  <li><a href="https://github.com/inaciovasquez2020/urf-axioms">urf-axioms</a></li>
-  <li><a href="https://github.com/inaciovasquez2020/chronos-entropydepth">chronos-entropydepth</a></li>
-  <li><a href="https://github.com/inaciovasquez2020/final-wall-fo-k-locality">final-wall-fo-k-locality</a></li>
-</ul>
+      <div class="module-group">
+        <h3>Core Modules</h3>
+        <a href="https://github.com/inaciovasquez2020/urf-core" class="project-card"><span>urf-core</span><i class="fa-solid fa-chevron-right"></i></a>
+        <a href="https://github.com/inaciovasquez2020/urf-axioms" class="project-card"><span>urf-axioms</span><i class="fa-solid fa-chevron-right"></i></a>
+        <a href="https://github.com/inaciovasquez2020/chronos-entropydepth" class="project-card"><span>chronos-entropydepth</span><i class="fa-solid fa-chevron-right"></i></a>
+        <a href="https://github.com/inaciovasquez2020/final-wall-fo-k-locality" class="project-card"><span>final-wall-fo-k-locality</span><i class="fa-solid fa-chevron-right"></i></a>
+      </div>
 
-<h3>Bridges</h3>
-<ul>
-  <li><a href="https://github.com/inaciovasquez2020/exchange-force-framework">exchange-force-framework</a></li>
-  <li><a href="https://github.com/inaciovasquez2020/biological-friction-framework">biological-friction-framework</a></li>
-  <li><a href="https://github.com/inaciovasquez2020/operational-wavefunction-collapse">operational-wavefunction-collapse</a></li>
-</ul>
+      <div class="module-group">
+        <h3>Bridges</h3>
+        <a href="https://github.com/inaciovasquez2020/exchange-force-framework" class="project-card"><span>exchange-force-framework</span><i class="fa-solid fa-chevron-right"></i></a>
+        <a href="https://github.com/inaciovasquez2020/biological-friction-framework" class="project-card"><span>biological-friction-framework</span><i class="fa-solid fa-chevron-right"></i></a>
+        <a href="https://github.com/inaciovasquez2020/operational-wavefunction-collapse" class="project-card"><span>operational-wavefunction-collapse</span><i class="fa-solid fa-chevron-right"></i></a>
+      </div>
 
-<h3>Applied / Structural</h3>
-<ul>
-  <li><a href="https://github.com/inaciovasquez2020/radiative-rigidity">radiative-rigidity</a></li>
-  <li><a href="https://github.com/inaciovasquez2020/terminal-rigidity-witness-erb">terminal-rigidity-witness-erb</a></li>
-  <li><a href="https://github.com/inaciovasquez2020/support-drift">support-drift</a></li>
-</ul>
+      <div class="module-group">
+        <h3>Applied / Structural</h3>
+        <a href="https://github.com/inaciovasquez2020/radiative-rigidity" class="project-card"><span>radiative-rigidity</span><i class="fa-solid fa-chevron-right"></i></a>
+        <a href="https://github.com/inaciovasquez2020/terminal-rigidity-witness-erb" class="project-card"><span>terminal-rigidity-witness-erb</span><i class="fa-solid fa-chevron-right"></i></a>
+        <a href="https://github.com/inaciovasquez2020/support-drift" class="project-card"><span>support-drift</span><i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+    </section>
 
-<h2>Citation</h2>
-<p>
-Use the root repository as the global citation entry point:
-<br>
-<a href="https://github.com/inaciovasquez2020/scientific-infrastructure">
-github.com/inaciovasquez2020/scientific-infrastructure
-</a>
-</p>
+    <section id="citation">
+      <h2 class="section-label">Scholarly Attribution</h2>
+      <div class="sig-card">
+        <p>Use the root repository as the global citation entry point for the infrastructure:</p>
+        <code style="display: block; background: #f1f3f5; padding: 15px; border-radius: 4px; color: var(--accent-green); font-weight: 600;">
+          github.com/inaciovasquez2020/scientific-infrastructure
+        </code>
+        <p style="margin-top: 20px;"><a href="citations.html" style="color: var(--text-main); font-weight: 700;"><i class="fa-solid fa-list-ol"></i> View Full Citation Index</a></p>
+      </div>
+    </section>
 
-<h2>Governance</h2>
-<p>
-See <code>RELEASE_CHECKLIST.md</code> for publication rules.
-</p>
+    <section id="governance">
+      <h2 class="section-label">Governance</h2>
+      <p>Scientific integrity is maintained via strict release protocols. See <code>RELEASE_CHECKLIST.md</code> within the core repositories for formal publication rules.</p>
+    </section>
 
-<p><a href="citations.html">Citation index</a></p>
-<p><a href="citations.html">Citation index</a></p>
-<p><a href="citations.html">Citation index</a></p>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Inacio F. Vasquez. Unified Rigidity Framework.</p>
+    <p>All modules audited for Deterministic Local&rarr;Global Stability.</p>
+  </footer>
+
 </body>
 </html>
