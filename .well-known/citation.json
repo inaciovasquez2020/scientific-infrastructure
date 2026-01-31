@@ -1,0 +1,27 @@
+{
+  "title": "Scientific Infrastructure (URF): Root Manifest and Canonical Module Index",
+  "authors": [
+    {
+      "name": "Inacio F. Vasquez",
+      "orcid": "https://orcid.org/0009-0008-8459-3400"
+    }
+  ],
+  "year": 2026,
+  "repository": "https://github.com/inaciovasquez2020/scientific-infrastructure",
+  "website": "https://inaciovasquez2020.github.io/scientific-infrastructure/",
+  "doi": "10.5281/zenodo.18442204",
+  "license": "MIT",
+  "type": "software",
+  "modules": [
+    "urf-core",
+    "urf-axioms",
+    "chronos-entropydepth",
+    "final-wall-fo-k-locality",
+    "exchange-force-framework",
+    "biological-friction-framework",
+    "operational-wavefunction-collapse",
+    "radiative-rigidity",
+    "terminal-rigidity-witness-erb",
+    "support-drift"
+  ]
+}
