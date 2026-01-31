@@ -1,49 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Scientific Infrastructure — Citations</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Citation Index — Scientific Infrastructure (URF)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --slate-bg: #1e2329;
+      --accent-green: #3f9c35;
+      --text-main: #2f343b;
+      --text-muted: #69707a;
+      --border-light: #eef0f2;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+    body { 
+      margin: 0; 
+      font-family: 'Inter', sans-serif; 
+      color: var(--text-main); 
+      background-color: #f8f9fa; 
+      line-height: 1.6;
+    }
+
+    /* --- Navigation --- */
+    nav {
+      background: var(--slate-bg);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-brand { color: var(--white); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+    .nav-brand i { color: var(--accent-green); }
+    .nav-links a { color: #cfd3d8; text-decoration: none; font-size: 13px; font-weight: 500; margin-left: 20px; }
+
+    /* --- Hero --- */
+    .hero {
+      background: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .hero h1 { 
+      font-family: 'Libre Baskerville', serif; 
+      font-size: 2.5rem; 
+      margin: 0; 
+      color: var(--slate-bg);
+    }
+
+    /* --- Content --- */
+    .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+    section { margin-bottom: 60px; }
+    
+    h2.section-label { 
+      font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; 
+      color: var(--accent-green); border-bottom: 2px solid var(--border-light);
+      padding-bottom: 10px; margin-bottom: 30px;
+    }
+
+    .citation-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      padding: 30px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    }
+
+    .cite-entry {
+      font-size: 15px;
+      color: var(--text-main);
+      border-left: 3px solid var(--accent-green);
+      padding-left: 20px;
+      margin-bottom: 25px;
+    }
+    .cite-entry i { color: var(--text-muted); font-style: italic; }
+    .doi-link { color: var(--accent-green); text-decoration: none; font-weight: 600; font-family: monospace; }
+
+    .module-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+      list-style: none;
+      padding: 0;
+    }
+    .module-item {
+      background: #f1f3f5;
+      padding: 10px 15px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-family: monospace;
+      color: var(--text-main);
+      border: 1px solid transparent;
+      transition: 0.2s;
+    }
+    .module-item:hover { border-color: var(--accent-green); background: var(--white); }
+
+    .instruction-note {
+      background: #fff9db;
+      border: 1px solid #fab005;
+      padding: 20px;
+      border-radius: 6px;
+      font-size: 14px;
+      color: #856404;
+    }
+
+    footer {
+      background: var(--slate-bg);
+      color: #9aa0a6;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 12px;
+      margin-top: 80px;
+    }
+  </style>
 </head>
 <body>
 
-<h1>Citation Index</h1>
+  <nav>
+    <a href="index.html" class="nav-brand">
+      <i class="fa-solid fa-quote-right"></i>
+      <span>VASQUEZ LAB</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Infrastructure</a>
+      <a href="https://github.com/inaciovasquez2020">GitHub</a>
+    </div>
+  </nav>
 
-<p>
-This page lists the canonical citation targets for the
-Scientific Infrastructure and its Tier A modules.
-</p>
+  <header class="hero">
+    <h1>Citation Index</h1>
+    <p style="color: var(--text-muted);">Formal attribution standards for the Unified Rigidity Framework (URF).</p>
+  </header>
 
-<h2>Root Infrastructure</h2>
+  <div class="container">
+    
+    <section>
+      <h2 class="section-label">Root Infrastructure</h2>
+      <div class="citation-card">
+        <div class="cite-entry">
+          Vasquez, Inacio F. (2026). <br>
+          <i>Scientific Infrastructure (URF): Root Manifest and Canonical Module Index</i>. <br>
+          GitHub Repository. <br>
+          DOI: <a href="https://doi.org/10.5281/zenodo.18442204" class="doi-link">10.5281/zenodo.18442204</a>
+        </div>
+      </div>
+    </section>
 
-<ul>
-  <li>
-    Vasquez, Inacio F. (2026).
-    <i>Scientific Infrastructure (URF): Root Manifest and Canonical Module Index</i>.
-    GitHub repository.
-    DOI: <a href="https://doi.org/10.5281/zenodo.XXXXXXX">10.5281/zenodo.XXXXXXX</a>
-  </li>
-</ul>
+    <section>
+      <h2 class="section-label">Tier A Modules</h2>
+      <div class="citation-card">
+        <p style="font-size: 14px; margin-bottom: 20px; color: var(--text-muted);">The following modules are part of the canonical Tier A release. Citation should include the root DOI and the specific module identifier.</p>
+        <ul class="module-list">
+          <li class="module-item">urf-core</li>
+          <li class="module-item">urf-axioms</li>
+          <li class="module-item">chronos-entropydepth</li>
+          <li class="module-item">final-wall-fo-k-locality</li>
+          <li class="module-item">exchange-force-framework</li>
+          <li class="module-item">biological-friction-framework</li>
+          <li class="module-item">operational-wavefunction-collapse</li>
+          <li class="module-item">radiative-rigidity</li>
+          <li class="module-item">terminal-rigidity-witness-erb</li>
+          <li class="module-item">support-drift</li>
+        </ul>
+      </div>
+    </section>
 
-<h2>Tier A Modules</h2>
+    <section>
+      <h2 class="section-label">Standard for Attribution</h2>
+      <div class="instruction-note">
+        <i class="fa-solid fa-circle-info"></i> 
+        <strong>Guideline:</strong> For each module utilized in derivative research, authors are requested to cite the corresponding repository release and its unique DOI (if available), in addition to the root infrastructure DOI above.
+      </div>
+    </section>
 
-<ul>
-  <li>urf-core</li>
-  <li>urf-axioms</li>
-  <li>chronos-entropydepth</li>
-  <li>final-wall-fo-k-locality</li>
-  <li>exchange-force-framework</li>
-  <li>biological-friction-framework</li>
-  <li>operational-wavefunction-collapse</li>
-  <li>radiative-rigidity</li>
-  <li>terminal-rigidity-witness-erb</li>
-  <li>support-drift</li>
-</ul>
+  </div>
 
-<p>
-For each module, cite the corresponding repository release and DOI
-(if available), in addition to the root infrastructure DOI.
-</p>
+  <footer>
+    <p>&copy; 2026 Inacio F. Vasquez. Independent Research Program.</p>
+    <p>Index Version: 2026.01.A | Deterministic Verification Enabled</p>
+  </footer>
 
 </body>
 </html>
