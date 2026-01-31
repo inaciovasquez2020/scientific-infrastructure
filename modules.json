@@ -1,0 +1,24 @@
+{
+  "project": "Scientific Infrastructure (URF)",
+  "version": "v1.0",
+  "tier_a": {
+    "core": [
+      "urf-core",
+      "urf-axioms",
+      "chronos-entropydepth",
+      "final-wall-fo-k-locality"
+    ],
+    "bridges": [
+      "exchange-force-framework",
+      "biological-friction-framework",
+      "operational-wavefunction-collapse"
+    ],
+    "applied_structural": [
+      "radiative-rigidity",
+      "terminal-rigidity-witness-erb",
+      "support-drift"
+    ]
+  },
+  "tier_b": [],
+  "tier_c_policy": "Any repository not listed in tier_a or tier_b is out of scope."
+}
