@@ -1,35 +1,104 @@
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-  line-height: 1.6;
-  color: #111;
+/* --- Vasquez Lab / URF CSS Standard --- */
+
+:root {
+  --slate-bg: #1e2329;
+  --accent-green: #3f9c35;
+  --text-main: #2f343b;
+  --text-muted: #69707a;
+  --border-light: #eef0f2;
+  --white: #ffffff;
+  --bg-subtle: #f8f9fa;
 }
 
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  max-width: 900px;
+  margin: 0 auto; /* Centering handled by container logic or body margin */
+  padding: 40px 20px;
+  line-height: 1.6;
+  color: var(--text-main);
+  background-color: var(--bg-subtle);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Headings --- */
 h1, h2, h3 {
-  margin-top: 1.4em;
+  color: var(--slate-bg);
+  margin-top: 1.8em;
+  margin-bottom: 0.8em;
+  font-weight: 700;
 }
 
 h1 {
-  font-size: 2.2em;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.8rem;
+  letter-spacing: -1px;
+  margin-top: 0.5em;
 }
 
 h2 {
-  font-size: 1.6em;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 4px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent-green);
+  border-bottom: 2px solid var(--border-light);
+  padding-bottom: 10px;
 }
 
+h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+/* --- Links --- */
 a {
-  color: #0645ad;
+  color: var(--accent-green);
   text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
 a:hover {
+  color: var(--slate-bg);
   text-decoration: underline;
 }
 
+/* --- Lists & Components --- */
 ul {
-  margin-left: 1.2em;
+  margin-left: 0;
+  padding-left: 1.2em;
+  list-style-type: square;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Specific styling for the DOI/Zenodo badge */
+img[alt="DOI"] {
+  border-radius: 4px;
+  transition: transform 0.2s;
+}
+
+img[alt="DOI"]:hover {
+  transform: scale(1.02);
+}
+
+/* --- Utility Cards --- */
+.card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  margin: 20px 0;
+}
+
+code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  background: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
 }
