@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Scientific Infrastructure (URF) — Releases</title>
+  <link>https://inaciovasquez2020.github.io/scientific-infrastructure/</link>
+  <description>Release feed for the Scientific Infrastructure root.</description>
+  <language>en-us</language>
+
+  <item>
+    <title>v1.0 — Scientific Infrastructure Root</title>
+    <link>https://github.com/inaciovasquez2020/scientific-infrastructure/releases/tag/v1.0</link>
+    <guid>https://github.com/inaciovasquez2020/scientific-infrastructure/releases/tag/v1.0</guid>
+    <description>Canonical root control plane: MANIFEST, modules.json, RELEASE_CHECKLIST.</description>
+    <pubDate>Fri, 31 Jan 2026 00:00:00 GMT</pubDate>
+  </item>
+
+</channel>
+</rss>
