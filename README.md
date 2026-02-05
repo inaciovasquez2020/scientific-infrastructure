@@ -9,6 +9,11 @@ The `scientific-infrastructure` module ensures reproducibility across the resear
 This repository is a registered infrastructure module of the Vasquez Index. Operational status and environment specifications are maintained at:
 * [Vasquez Index Dashboard](https://inaciovasquez2020.github.io/vasquez-index/dashboard.html)
 
+URF Prefab System
+https://github.com/inaciovasquez2020/urf-prefab-system
+Role: Canonical executable prefab layer (axioms, schemas, verifiers, integrity manifests)
+Status: Frozen v1.0.0
+Dependency: URF Core (locked)
 ## Repository Metadata
 * **Repository Handle:** inaciovasquez2020/scientific-infrastructure
 * **Role:** Environment Orchestration & Reproducibility
