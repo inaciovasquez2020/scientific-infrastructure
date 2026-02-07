@@ -1,3 +1,5 @@
+[![Lean Action CI](https://github.com/inaciovasquez2020/scientific-infrastructure/actions/workflows/lean_action_ci.yml/badge.svg)](https://github.com/inaciovasquez2020/scientific-infrastructure/actions/workflows/lean_action_ci.yml)
+
 # scientific-infrastructure
 
 **Canonical environment, deployment, and reproducibility layer for the Vasquez Research ecosystem.**
@@ -35,6 +37,12 @@ All computational claims published under the Vasquez Index are validated against
   - Deterministic build and verification pipelines
 
 This repository is **infrastructure only**. It contains no scientific claims, axioms, or domain logic.
+
+---
+
+## Minimal Directory Map
+
+This repository intentionally maintains a small, explicit surface area.
 
 ---
 
