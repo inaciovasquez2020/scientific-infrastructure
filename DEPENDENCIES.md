@@ -48,3 +48,23 @@ Integration mode
 - Citation-only dependency
 - No code import
 - No semantic coupling
+
+Final Wall FO^k Locality
+Repository: https://github.com/inaciovasquez2020/final-wall-fo-k-locality
+Version: v1.0.0
+Status: Frozen terminal obstruction (framework record)
+Branch: main (immutable)
+
+Canonical artifacts
+- Oblivion_Final_Wall.tex
+- STATUS.md
+- README.md
+
+Claims
+- Structural reduction to the FO^k Locality Final Wall
+- No resolution claimed; obstruction is explicit
+
+Integration mode
+- Citation-only dependency
+- No code import
+- No semantic coupling
