@@ -30,3 +30,21 @@ Integration mode
 - Citation-only dependency
 - No code import
 - No semantic coupling
+
+Exchange-Force-Framework
+Repository: https://github.com/inaciovasquez2020/Exchange-Force-Framework
+Version: v0.1.0
+Status: Frozen framework reference (not Tier-A artifact)
+Branch: main (immutable)
+
+Artifact
+- README.md / STATUS.md
+
+Claims
+- Structural classification of exchange forces (Type I / Type II)
+- ECC invariant defined; quantitative rigidity implications remain conditional/open
+
+Integration mode
+- Citation-only dependency
+- No code import
+- No semantic coupling
