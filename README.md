@@ -19,13 +19,6 @@ All computational claims published under the Vasquez Index are validated against
 
 ---
 
-## Project Hub (HTML)
-- Live dashboard: https://inaciovasquez2020.github.io/vasquez-index/dashboard.html
-- Index: https://inaciovasquez2020.github.io/vasquez-index/
-- Canonical site: https://inaciovasquez2020.github.io
-
----
-
 ## What This Repository Provides
 
 - **Environment orchestration**
