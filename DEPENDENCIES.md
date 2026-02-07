@@ -68,3 +68,22 @@ Integration mode
 - Citation-only dependency
 - No code import
 - No semantic coupling
+
+Operational Wavefunction Collapse
+Repository: https://github.com/inaciovasquez2020/Operational-Wavefunction-Collapse
+Version: v0.1.0
+Status: Frozen framework reference (not Tier-A artifact)
+Branch: main (immutable)
+
+Canonical artifacts
+- README.md
+- STATUS.md
+
+Claims
+- Operational, information-theoretic formulation of wavefunction collapse
+- No ontological or empirical claims beyond stated scope
+
+Integration mode
+- Citation-only dependency
+- No code import
+- No semantic coupling
