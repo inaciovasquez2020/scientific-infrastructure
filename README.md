@@ -1,5 +1,3 @@
-[![Lean Action CI](https://github.com/inaciovasquez2020/scientific-infrastructure/actions/workflows/lean_action_ci.yml/badge.svg)](https://github.com/inaciovasquez2020/scientific-infrastructure/actions/workflows/lean_action_ci.yml)
-
 # scientific-infrastructure
 
 **Canonical environment, deployment, and reproducibility layer for the Vasquez Research ecosystem.**
