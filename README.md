@@ -15,8 +15,14 @@ The `scientific-infrastructure` repository provides the **operational substrate*
 - `radiative-rigidity`
 - `biological-friction-framework`
 - other Vasquez Index–registered modules
-
 All computational claims published under the Vasquez Index are validated against the environments specified here.
+
+---
+
+## Project Hub (HTML)
+- Live dashboard: https://inaciovasquez2020.github.io/vasquez-index/dashboard.html
+- Index: https://inaciovasquez2020.github.io/vasquez-index/
+- Canonical site: https://inaciovasquez2020.github.io
 
 ---
 
