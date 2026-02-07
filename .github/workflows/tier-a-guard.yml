@@ -1,0 +1,36 @@
+name: tier-a-guard
+
+on:
+push:
+branches:
+- main
+pull_request:
+branches:
+- main
+
+jobs:
+guard:
+runs-on: ubuntu-latest
+steps:
+- uses: actions/checkout@v4
+
+  - name: Verify Tier-A mirrors exist
+    run: |
+      test -d tier-a/urf-prefab-system
+      test -d tier-a/rank-dichotomy-cat0
+      test -d tier-a/terminal-rigidity-witness-erb
+      echo "Tier-A directories present"
+
+  - name: Verify required canonical files
+    run: |
+      test -f tier-a/urf-prefab-system/STATUS.md
+      test -f tier-a/rank-dichotomy-cat0/paper/Rank_Dichotomy_CAT0.pdf
+      test -f tier-a/terminal-rigidity-witness-erb/trw-erb-sigc.pdf
+      echo "Tier-A canonical artifacts present"
+
+  - name: Block accidental edits to Tier-A
+    run: |
+      git diff --name-only HEAD~1..HEAD | grep '^tier-a/' && {
+        echo "ERROR: Direct edits to Tier-A are not allowed";
+        exit 1;
+      } || echo "No Tier-A edits detected"
