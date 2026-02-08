@@ -37,6 +37,11 @@ This repository is **infrastructure only**. It contains no scientific claims, ax
 
 ---
 
+URF Verifier
+- Repo: https://github.com/inaciovasquez2020/urf-verifier
+- Latest release: v1.1.0 (admissibility enforced)
+- Replay: deterministic, CI-backed
+
 ## Minimal Directory Map
 
 This repository intentionally maintains a small, explicit surface area.
