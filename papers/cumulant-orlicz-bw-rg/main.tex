@@ -1,0 +1,194 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{bm}
+\usepackage{hyperref}
+
+\title{\textbf{Cumulant Hopf Structures, Orlicz \(\Gamma_2\) Transport,
+BW Curvature Spectrum, mod-\(\phi\) Flow Rigidity, and Exact RG via Birkhoff Factorization}}
+\author{Inacio F.\ Vasquez}
+\date{}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+\begin{document}
+\maketitle
+
+\section{Hopf algebra of cumulant diagrams}
+
+Let \(\mathcal H=\bigoplus_{n\ge0}\mathcal H_n\) be a connected graded Hopf algebra over \(\mathbb R\) generated as an algebra by connected cumulant diagrams, with multiplication \(G_1G_2:=G_1\sqcup G_2\) and unit \(1=\emptyset\).
+
+\begin{definition}[Admissible subdiagram family]
+Fix a class \(\mathsf{Adm}(G)\) of subdiagrams \(H\subseteq G\) such that
+\[
+\emptyset\in \mathsf{Adm}(G),\qquad G\in \mathsf{Adm}(G),
+\]
+and \(H\in\mathsf{Adm}(G)\Rightarrow H\) is a disjoint union of connected admissible components.
+\end{definition}
+
+Define coproduct
+\[
+\Delta G=\sum_{H\in\mathsf{Adm}(G)} H\otimes G/H.
+\]
+Counit \(\varepsilon(\emptyset)=1\), \(\varepsilon(G)=0\) for \(G\neq\emptyset\).
+Antipode by recursion
+\[
+S(G)=-G-\sum_{\emptyset\subsetneq H\subsetneq G\atop H\in\mathsf{Adm}(G)} S(H)\,(G/H).
+\]
+
+\begin{lemma}[Hopf axioms reduction]
+If \(\mathsf{Adm}\) is stable under contraction and disjoint union and satisfies the forest compatibility condition
+\[
+K\in\mathsf{Adm}(H),\,H\in\mathsf{Adm}(G)\ \Rightarrow\ K\in\mathsf{Adm}(G)\ \text{and}\ (G/H)/(H/K)\cong G/K,
+\]
+then \((\mathcal H,m,\Delta,\varepsilon,S)\) is a connected graded Hopf algebra.
+\end{lemma}
+
+Let \(G(\mathcal H)\) be the character group of \(\mathcal H\) valued in \(\mathbb R\), with convolution
+\[
+(\chi_1*\chi_2)(G)=\sum_{H\in\mathsf{Adm}(G)}\chi_1(H)\chi_2(G/H).
+\]
+Infinitesimal characters are linear maps \(\theta:\mathcal H\to\mathbb R\) with
+\[
+\theta(G_1G_2)=\theta(G_1)\varepsilon(G_2)+\varepsilon(G_1)\theta(G_2).
+\]
+
+\begin{lemma}[Pro-nilpotence criterion]
+Assume \(\dim \mathcal H_n<\infty\) for all \(n\). Then the Lie algebra of infinitesimal characters with bracket
+\[
+[\theta_1,\theta_2]=\theta_1*\theta_2-\theta_2*\theta_1
+\]
+is pro-nilpotent, and \(\exp_*\) defines a bijection from infinitesimal characters to characters.
+\end{lemma}
+
+\begin{theorem}[Conditional: Lie algebra cohomology]
+Assume the pro-nilpotence criterion and that the dual Hopf algebra \(\mathcal H^\vee=\bigoplus_n \mathcal H_n^*\) exists as a graded Hopf algebra. Then the continuous Chevalley--Eilenberg cohomology of the character Lie algebra satisfies
+\[
+H^\bullet_{\mathrm{cont}}(\mathfrak g,\mathbb R)\cong H^\bullet_{\mathrm{Hoch}}(\mathcal H^\vee,\mathbb R)
+\]
+under the standard Lie--Hochschild comparison map.
+\end{theorem}
+
+\section{Orlicz \(\Gamma_2\) and transport}
+
+Let \((\Phi,\Phi^*)\) be a Young pair. On a smooth metric measure space with reference \(\pi\), define the Orlicz carré-du-champ
+\[
+\Gamma_\Phi(f)=\Phi^*(|\nabla f|),
+\]
+and assume an Orlicz curvature condition
+\[
+\Gamma_{2,\Phi}(f)\ge \kappa\,\Gamma_\Phi(f).
+\]
+
+\begin{definition}[Full Orlicz logarithmic Sobolev inequality]
+We say \(\pi\) satisfies \(\mathrm{LSI}_\Phi(\kappa)\) if for all smooth \(g>0\),
+\[
+\mathrm{Ent}_\pi(g)\le \frac{1}{\kappa}\int g\,\Phi^*(|\nabla \log g|)\,d\pi.
+\]
+\end{definition}
+
+Let \(W_\Phi\) denote the Orlicz transport cost induced by \(c_\Phi(x,y)=\Phi(d(x,y))\).
+
+\begin{lemma}[Conditional: Orlicz Hamilton--Jacobi duality]
+Assume existence of a Hamilton--Jacobi semigroup \(Q_t\) with
+\[
+\partial_t Q_t f + \Phi^*(|\nabla Q_t f|)=0
+\]
+in viscosity sense, and Kantorovich duality
+\[
+W_\Phi(\nu,\pi)=\sup_{f}\left\{\int f\,d\nu-\int Q_1 f\,d\pi\right\}.
+\]
+\end{lemma}
+
+\begin{theorem}[Conditional: \(\mathrm{LSI}_\Phi \Rightarrow\) Orlicz transport]
+Assume \(\mathrm{LSI}_\Phi(\kappa)\) and the Orlicz Hamilton--Jacobi duality lemma. Then there exists \(C=C(\kappa,\Phi)\) such that for all \(\nu\ll\pi\),
+\[
+W_\Phi(\nu,\pi)\le C\,\mathrm{KL}(\nu\|\pi).
+\]
+\end{theorem}
+
+\begin{theorem}[Conditional: Orlicz transport \(\Rightarrow \mathrm{LSI}_\Phi\)]
+Assume the dual formulation above, differentiability of \(t\mapsto \int e^{Q_t f}\,d\pi\), and an Orlicz hypercontractive estimate for \(Q_t\). Then \(\mathrm{LSI}_\Phi(\kappa')\) holds for some \(\kappa'>0\).
+\end{theorem}
+
+\begin{corollary}[Conditional: equivalence]
+Under the combined assumptions of the two implications, full Orlicz LSI is equivalent to the Orlicz transport inequality.
+\end{corollary}
+
+\section{Bures--Wasserstein curvature spectrum and heat trace}
+
+Let \(\mathcal P_d\) be the SPD manifold with BW metric
+\[
+g_P(H,K)=\mathrm{tr}(P^{-1}HP^{-1}K).
+\]
+At \(P=I\), identify \(T_I\mathcal P_d\cong \mathrm{Sym}_d\). For \(A\in\mathrm{Sym}_d\), define \(\mathcal C_A(B)=[A,B]\) on \(\mathfrak{gl}_d\).
+
+\begin{proposition}[Commutator spectrum]
+If \(A\) is diagonalizable with eigenvalues \(\lambda_1,\dots,\lambda_d\), then
+\[
+\sigma(\mathcal C_A)=\{\lambda_i-\lambda_j\}_{1\le i,j\le d}.
+\]
+\end{proposition}
+
+\begin{theorem}[Curvature eigenvalues at \(I\)]
+Assume the BW Levi-Civita connection agrees with the affine-invariant form at \(I\) on the \(\mathrm{O}(d)\)-reductive decomposition. Then sectional curvature eigenvalues associated to commutator modes are
+\[
+-\frac14(\lambda_i-\lambda_j)^2.
+\]
+\end{theorem}
+
+\begin{theorem}[Conditional: heat trace asymptotics]
+Assume a compact quotient or a confining potential perturbation yielding compact resolvent for \(\Delta_{BW}\). Then
+\[
+\mathrm{Tr}(e^{-t\Delta_{BW}})\sim \sum_{k\ge0} a_k\,t^{(k-d_{\mathrm{eff}})/2},
+\]
+with \(a_0=(4\pi)^{-d_{\mathrm{eff}}/2}\mathrm{Vol}(\mathcal P_d)\) and \(a_1\) determined by scalar curvature.
+\end{theorem}
+
+\section{mod-\(\phi\) preserving stochastic flows}
+
+Let \(X_t\) be a Markov process with cumulant generating function \(\psi_t(s)=\log\mathbb E e^{sX_t}\).
+
+\begin{definition}[Full mod-\(\phi\) invariance constraint]
+A flow preserves full mod-\(\phi\) structure if there exist \(\alpha(t)>0\), \(\beta(t)\in\mathbb R\), \(\gamma(t)\in\mathbb R\) such that
+\[
+\psi_t(s)=\psi_0(\alpha(t)s)+\beta(t)s+\gamma(t)
+\]
+for all \(s\) in a neighborhood of \(0\).
+\end{definition}
+
+\begin{theorem}[Conditional: generator rigidity]
+Assume \(\psi_t\) is \(C^2\) in \(t\) and analytic in \(s\) near \(0\), and \(X_t\) has a diffusion generator \(\mathcal L=b(x)\partial_x+\frac12 a(x)\partial_x^2\).
+If full mod-\(\phi\) invariance holds for a non-degenerate \(\psi_0\), then \(a(x)\) is constant and \(b(x)\) is affine:
+\[
+a(x)\equiv \sigma^2,\qquad b(x)=ux+v,
+\]
+so \(\mathcal L= (ux+v)\partial_x+\frac{\sigma^2}{2}\partial_x^2\).
+\end{theorem}
+
+\section{Exact RG via Birkhoff factorization on characters}
+
+Let \(\mathcal A\) be a commutative Rota--Baxter algebra with splitting \(\mathcal A=\mathcal A_-\oplus \mathcal A_+\). Let \(\chi(z)\in G(\mathcal H\otimes \mathcal A)\) be a loop of characters.
+
+\begin{theorem}[Birkhoff decomposition]
+If the grading on \(\mathcal H\) is compatible with \(\mathcal A\)-poles and the counterterm recursion converges degreewise, then there exist unique \(\chi_\pm(z)\) with \(\chi_-(z)\in G(\mathcal H\otimes \mathcal A_-)\), \(\chi_+(z)\in G(\mathcal H\otimes \mathcal A_+)\) such that
+\[
+\chi(z)=\chi_-(z)^{-1}\chi_+(z).
+\]
+\end{theorem}
+
+Define the renormalized character \(\chi_R=\chi_+(0)\). Define the beta functional by logarithmic differentiation along the scale parameter \(\Lambda\):
+\[
+\beta=\left.\frac{d}{d\log\Lambda}\right|_{\Lambda=1}\chi_R.
+\]
+
+\begin{theorem}[Conditional: RG as Riemann--Hilbert problem]
+Assume scale-locality implies holomorphicity of \(\chi\) on a punctured neighborhood and the splitting \(\mathcal A_\pm\) realizes boundary values. Then the RG flow on cumulants is equivalent to the Riemann--Hilbert factorization problem for \(\chi\), and \(\beta\) is determined by the residue of \(\chi_-\).
+\end{theorem}
+
+\end{document}
