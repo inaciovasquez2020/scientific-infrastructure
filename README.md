@@ -99,3 +99,9 @@ If you use this repository to reproduce results or deploy URF-related frameworks
   year   = {2026},
   url    = {https://github.com/inaciovasquez2020/scientific-infrastructure}
 }
+
+## Quickstart (60 seconds)
+
+```bash
+./scripts/infra check
+```
