@@ -1,17 +1,27 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-cmd="${1:-}"
+echo "Scientific infrastructure invariant check"
 
-case "$cmd" in
-  check)
-    echo "Scientific infrastructure check:"
-    echo "Repository structure:"
-    ls -1
-    echo "OK: infrastructure repo reachable"
-    ;;
-  *)
-    echo "Usage: ./scripts/infra check"
-    exit 2
-    ;;
-esac
+# Invariant 1: required top-level control files
+for f in README.md STATUS.md scripts; do
+  test -e "$f" || { echo "Missing required $f"; exit 1; }
+done
+
+# Invariant 2: no generated artifacts tracked
+if git ls-files | grep -E '^(\.lake/|build/|dist/)' >/dev/null; then
+  echo "Build artifacts detected in repository"
+  exit 1
+fi
+
+# Invariant 3: entrypoint must be executable
+test -x scripts/infra || { echo "scripts/infra is not executable"; exit 1; }
+
+# Invariant 4: tier directories are OPTIONAL (checked only if present)
+if [ -d tier-a ]; then
+  for d in tier-a/*; do
+    test -d "$d" || { echo "Invalid tier-a entry: $d"; exit 1; }
+  done
+fi
+
+echo "OK: infrastructure invariants satisfied"

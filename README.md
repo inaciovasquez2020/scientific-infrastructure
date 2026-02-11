@@ -105,3 +105,7 @@ If you use this repository to reproduce results or deploy URF-related frameworks
 ```bash
 ./scripts/infra check
 ```
+
+## Status
+
+![infra-check](https://github.com/inaciovasquez2020/scientific-infrastructure/actions/workflows/infra-check.yml/badge.svg)
