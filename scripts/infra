@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cmd="${1:-}"
+
+case "$cmd" in
+  check)
+    echo "Scientific infrastructure check:"
+    echo "Repository structure:"
+    ls -1
+    echo "OK: infrastructure repo reachable"
+    ;;
+  *)
+    echo "Usage: ./scripts/infra check"
+    exit 2
+    ;;
+esac
