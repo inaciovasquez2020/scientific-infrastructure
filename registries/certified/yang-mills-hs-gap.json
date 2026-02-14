@@ -1,38 +1,21 @@
 {
-  "name": "Yang–Mills HS-Gap Certificate",
-  "repo": "https://github.com/inaciovasquez2020/yang-mills-hs-gap-cert",
-  "frozen_tag": "frozen-ym-hs-gap-P3",
+  "id": "yang-mills-hs-gap",
+  "domain": "mathematical-physics",
+  "problem": "Yang–Mills Mass Gap (Clay Millennium)",
+  "result_type": "certified counterexample",
   "status": "frozen",
-  "method": "Hilbert–Schmidt coercivity transfer",
-  "operator": {
-    "type": "normalized YM Hessian",
-    "gauge": "Landau",
-    "sector": "transverse modes",
-    "regulators": {
-      "uv": "heat-kernel cutoff exp(-Δ/Λ^2)",
-      "ir": "mass regulator m0 → 0",
-      "volume": "4-torus T_L^4 → R^4"
-    }
-  },
-  "criterion": {
-    "inequality": "eta + delta < 1",
-    "norm": "Hilbert–Schmidt",
-    "consequence": "spectral gap ⇒ mass gap"
-  },
-  "artifacts": [
-    "certs/YM_HS_GAP_CERT_0001.json",
-    "certs/YM_HS_GAP_CERT_0002.json",
-    "certs/YM_HS_GAP_CERT_0003.json"
-  ],
-  "ci": {
-    "system": "github-actions",
-    "checks": [
-      "schema validation",
-      "HS bound computation",
-      "eta+delta < 1",
-      "cross-certificate monotonicity"
+  "summary": "Executable certificates demonstrate divergence of naive Hilbert–Schmidt coercivity bounds for the Yang–Mills Hessian under explicit truncation, ruling out a direct HS-gap proof of the mass gap.",
+  "primary_repository": "https://github.com/inaciovasquez2020/yang-mills-hs-gap-cert",
+  "frozen_tag": "frozen-ym-hs-gap-divergence",
+  "verification": {
+    "method": "CI-verified executable certificates",
+    "properties": [
+      "monotone divergence",
+      "explicit counterexamples",
+      "schema-validated artifacts"
     ]
   },
-  "notes": "Monotone HS-bound decay enforced by CI up to P3; tag frozen-ym-hs-gap-P3"
+  "implication": "Any viable Yang–Mills mass gap proof must rely on stronger norms or additional structure beyond Hilbert–Schmidt coercivity.",
+  "date_frozen": "2026-02-14"
 }
 
