@@ -1,13 +1,38 @@
 {
   "name": "Yang–Mills HS-Gap Certificate",
   "repo": "https://github.com/inaciovasquez2020/yang-mills-hs-gap-cert",
-  "frozen_tag": "frozen-ym-hs-gap-P2",
+  "frozen_tag": "frozen-ym-hs-gap-P3",
   "status": "frozen",
   "method": "Hilbert–Schmidt coercivity transfer",
+  "operator": {
+    "type": "normalized YM Hessian",
+    "gauge": "Landau",
+    "sector": "transverse modes",
+    "regulators": {
+      "uv": "heat-kernel cutoff exp(-Δ/Λ^2)",
+      "ir": "mass regulator m0 → 0",
+      "volume": "4-torus T_L^4 → R^4"
+    }
+  },
+  "criterion": {
+    "inequality": "eta + delta < 1",
+    "norm": "Hilbert–Schmidt",
+    "consequence": "spectral gap ⇒ mass gap"
+  },
   "artifacts": [
     "certs/YM_HS_GAP_CERT_0001.json",
-    "certs/YM_HS_GAP_CERT_0002.json"
+    "certs/YM_HS_GAP_CERT_0002.json",
+    "certs/YM_HS_GAP_CERT_0003.json"
   ],
-  "ci": "github-actions",
-  "notes": "Monotone stability established up to P2"
+  "ci": {
+    "system": "github-actions",
+    "checks": [
+      "schema validation",
+      "HS bound computation",
+      "eta+delta < 1",
+      "cross-certificate monotonicity"
+    ]
+  },
+  "notes": "Monotone HS-bound decay enforced by CI up to P3; tag frozen-ym-hs-gap-P3"
 }
+
