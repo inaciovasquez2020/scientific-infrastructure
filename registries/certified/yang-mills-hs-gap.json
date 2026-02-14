@@ -1,0 +1,13 @@
+{
+  "name": "Yang–Mills HS-Gap Certificate",
+  "repo": "https://github.com/inaciovasquez2020/yang-mills-hs-gap-cert",
+  "frozen_tag": "frozen-ym-hs-gap-P2",
+  "status": "frozen",
+  "method": "Hilbert–Schmidt coercivity transfer",
+  "artifacts": [
+    "certs/YM_HS_GAP_CERT_0001.json",
+    "certs/YM_HS_GAP_CERT_0002.json"
+  ],
+  "ci": "github-actions",
+  "notes": "Monotone stability established up to P2"
+}
