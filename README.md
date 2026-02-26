@@ -115,3 +115,7 @@ If you use this repository to reproduce results or deploy URF-related frameworks
 - Yang–Mills HS-Gap (frozen P2):  
   https://github.com/inaciovasquez2020/yang-mills-hs-gap-cert  
   Tag: frozen-ym-hs-gap-P2
+
+This repository provides shared tooling, environment definitions, and reproducibility infrastructure used across scientific projects, without containing domain-specific research code.
+
+This project relies on shared tooling and reproducibility infrastructure provided by the scientific-infrastructure repository; it contains domain-specific research code only.
