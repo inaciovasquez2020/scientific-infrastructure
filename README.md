@@ -119,3 +119,11 @@ If you use this repository to reproduce results or deploy URF-related frameworks
 This repository provides shared tooling, environment definitions, and reproducibility infrastructure used across scientific projects, without containing domain-specific research code.
 
 This project relies on shared tooling and reproducibility infrastructure provided by the scientific-infrastructure repository; it contains domain-specific research code only.
+
+## Downstream Projects
+
+- dfm-mkc-cosmology: cosmology solvers and numerical checks
+- chronos-entropydepth: entropy-depth and rigidity results
+- capacity-locality-certification: locality/capacity certification tooling
+
+Each relies on this repository for shared tooling and reproducibility guarantees.
