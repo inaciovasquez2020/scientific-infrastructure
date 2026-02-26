@@ -127,3 +127,7 @@ This project relies on shared tooling and reproducibility infrastructure provide
 - capacity-locality-certification: locality/capacity certification tooling
 
 Each relies on this repository for shared tooling and reproducibility guarantees.
+
+## Stability & CI
+
+This repository is intentionally conservative: changes are limited to tooling, environment definitions, and reproducibility guarantees. All updates must pass CI and are merged via pull request.
