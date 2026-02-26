@@ -1,0 +1,21 @@
+{
+  "id": "yang-mills-hs-gap",
+  "domain": "mathematical-physics",
+  "problem": "Yang–Mills Mass Gap (Clay Millennium)",
+  "result_type": "certified counterexample",
+  "status": "frozen",
+  "summary": "Executable certificates demonstrate divergence of naive Hilbert–Schmidt coercivity bounds for the Yang–Mills Hessian under explicit truncation, ruling out a direct HS-gap proof of the mass gap.",
+  "primary_repository": "https://github.com/inaciovasquez2020/yang-mills-hs-gap-cert",
+  "frozen_tag": "frozen-ym-hs-gap-divergence",
+  "verification": {
+    "method": "CI-verified executable certificates",
+    "properties": [
+      "monotone divergence",
+      "explicit counterexamples",
+      "schema-validated artifacts"
+    ]
+  },
+  "implication": "Any viable Yang–Mills mass gap proof must rely on stronger norms or additional structure beyond Hilbert–Schmidt coercivity.",
+  "date_frozen": "2026-02-14"
+}
+

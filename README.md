@@ -109,3 +109,9 @@ If you use this repository to reproduce results or deploy URF-related frameworks
 ## Status
 
 ![infra-check](https://github.com/inaciovasquez2020/scientific-infrastructure/actions/workflows/infra-check.yml/badge.svg)
+
+## Certified Artifacts
+
+- Yang–Mills HS-Gap (frozen P2):  
+  https://github.com/inaciovasquez2020/yang-mills-hs-gap-cert  
+  Tag: frozen-ym-hs-gap-P2
