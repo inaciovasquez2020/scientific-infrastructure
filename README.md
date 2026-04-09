@@ -106,6 +106,10 @@ If you use this repository to reproduce results or deploy URF-related frameworks
 ./scripts/infra check
 ```
 
+
+## Conditional note
+- `docs/INFRASTRUCTURE_INTEGRITY_NOTE_2026_04.md` — conditional note specifying the weakest audit-level extension compatible with the repository's infrastructure-only scope.
+
 ## Status
 
 ![infra-check](https://github.com/inaciovasquez2020/scientific-infrastructure/actions/workflows/infra-check.yml/badge.svg)
