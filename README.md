@@ -1,5 +1,24 @@
 # scientific-infrastructure
 
+
+<!-- PUBLIC-SURFACE:BEGIN -->
+## Start Here
+- [`QUICKSTART.md`](QUICKSTART.md)
+- [`docs/public/START_HERE.md`](docs/public/START_HERE.md)
+
+## Proof Status
+- [`docs/public/PROOF_STATUS.md`](docs/public/PROOF_STATUS.md)
+
+## Independent Verification
+- [`docs/public/INDEPENDENT_VERIFICATION.md`](docs/public/INDEPENDENT_VERIFICATION.md)
+
+## Why It Matters
+- [`docs/public/WHY_IT_MATTERS.md`](docs/public/WHY_IT_MATTERS.md)
+
+## Citation
+- [`CITATION.cff`](CITATION.cff)
+<!-- PUBLIC-SURFACE:END -->
+
 **Canonical environment, deployment, and reproducibility layer for the Vasquez Research ecosystem.**
 
 This repository defines the unified computational infrastructure used across all Universal Reference Frame (URF)–aligned research modules. It serves as the *single source of truth* for environment configuration, dependency locking, and execution guarantees within the Vasquez Index.
