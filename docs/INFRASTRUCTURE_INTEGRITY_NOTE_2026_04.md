@@ -1,3 +1,6 @@
+Status: Archived boundary note
+Repository-scope blocker: none
+
 # Infrastructure Integrity Note (2026-04)
 
 ## Status
