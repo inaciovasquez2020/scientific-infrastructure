@@ -9,3 +9,10 @@ urf-*/
 overlap-rigidity-*/
 phase-transition-pnp*/
 yang-mills-hs-gap-cert/
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+__pycache__/
+*.pyc
